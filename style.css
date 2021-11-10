@@ -79,14 +79,16 @@ a:focus{
     color: var(--on-background);
     border-bottom: 3px solid;
 }
-
 .about-container{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 .img-container{
     border: 2px solid var(--secondary-color);
     border-radius: 10px;
-    margin-right: 25px;
+    margin: 25px;
     padding: 10px 20px;
     width: auto;
     background: var(--background);
@@ -100,6 +102,7 @@ img{
 .button-container{
     margin-top: 15px;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 button{
@@ -107,7 +110,7 @@ button{
     height: 40px;
     cursor: pointer;
     border-radius: 10px;
-    margin-right: 10px;
+    margin: 10px;
     border: 2px solid var(--primary-color);
     font-size: 15px;
     outline: none;
@@ -156,8 +159,8 @@ p{
 }
 
 .fab{
-    font-size: 100px;
-    margin-right: 50px;
+    font-size: 40px;
+    margin: 20px;
     cursor: pointer;
     color: var(--primary-color);
 }
@@ -165,6 +168,9 @@ p{
     color: var(--on-background);
 }
 
+.contact-container{
+    text-align: center;
+}
 /* dark mode toggle */
 .theme-switch-wrapper{
     display: flex;
@@ -231,3 +237,24 @@ input:checked+.slider::before{
     margin-right: 5px;
 }
 
+@media screen and (max-width:600px) {
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    nav{
+        font-size: 20px;
+    }
+    a{
+        margin-right: 10px;
+    }
+    .theme-switch-wrapper{
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 1;
+    }
+}
